@@ -1,23 +1,32 @@
-# Nextra Docs Template 
+# Ngroker
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+[中文版本](./README_CN.md)
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
+⚠️ **Note: Ngroker is a non-open source project, and this repository is only used to manage requirements and user feedback.**
 
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
+[Ngroker](https://ngroker.com/) is a modern unified ingress platform gui client. Now available on `Windows`, `Mac`.
 
-## Quick Start
+Official website: https://ngroker.com
 
-Click the button to clone this repository and deploy it on Vercel:
+The features of Ngroker are small, fast, beautiful, free, no login is required, and it can be used immediately after installation.
 
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
+- The volume of the installation package is about 83M.
+- Cross-platform, based on Elctron+Vue+Vuetify development.
+- Both light and dark theme modes are supported.
 
-## Local Development
+## Desktop App
 
-First, run `pnpm i` to install the dependencies.
+The Ngroker desktop supports Windows/Mac and combines your reverse proxy, firewall, API gateway, and global load balancing to deliver apps and APIs.
 
-Then, run `pnpm dev` to start the development server and visit localhost:3000.
+## Installation
 
-## License
+Ngroker official website provides the download of the latest version: [Download Now](https://ngroker.com/download). If you want to download the historical version: [Click here](https://github.com/lerte/ngroker.com/releases).
 
-This project is licensed under the MIT License.
+## Documentation
+
+https://ngroker.com/docs/introduction
+
+## Thanks
+
+- [Nextra](https://nextra.site/)
+- [Electron⚡️Vite](https://electron-vite.github.io)
