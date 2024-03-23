@@ -1,9 +1,14 @@
 import React from "react";
+import Head from "./components/Head";
+import Logo from "./components/Logo";
+import Footer from "./components/Footer";
 import EditOnGithub from "./components/EditOnGithub";
 import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
-  logo: <strong>Ngroker</strong>,
+  useNextSeoProps: () => ({ titleTemplate: "%s – Ngroker" }),
+  head: Head,
+  logo: Logo,
   feedback: {
     content: null,
   },
@@ -17,7 +22,7 @@ const config: DocsThemeConfig = {
     link: "https://discord.com",
   },
   footer: {
-    text: "Copyright © 2024 Ngroker Inc.",
+    text: Footer,
   },
 };
 
