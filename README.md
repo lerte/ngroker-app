@@ -4,13 +4,12 @@
 
 ⚠️ **Note: Ngroker is a non-open source project, and this repository is only used to manage requirements and user feedback.**
 
-[Ngroker](https://ngroker.com/) is a modern unified ingress platform gui client. Now available on `Windows`, `Mac`.
+[Ngroker](https://ngroker.com/) is gui client base on ngrok command line single binaray program that is a modern unified ingress platform for developers. Now available on `Windows`, `Mac`.
 
 Official website: https://ngroker.com
 
 The features of Ngroker are small, fast, beautiful, free, no login is required, and it can be used immediately after installation.
 
-- The volume of the installation package is about 83M.
 - Cross-platform, based on Elctron+Vue+Vuetify development.
 - Both light and dark theme modes are supported.
 
