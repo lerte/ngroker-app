@@ -1,1 +1,57 @@
-# pricing todo
+import Link from 'next/link'
+import Button from './../components/Button';
+
+export default function Pricing() {
+
+const toCheckout = ()=> {
+console.log('click')
+window.location.href = "https://ngroker.lemonsqueezy.com/checkout";
+}
+
+return (
+
+<>
+  <h1>Find a plan to power your projects</h1>
+  <div className="mt-10 conatiner flex flex-col lg:flex-row gap-8">
+    <div className="border rounded-lg p-10 basis-1/2 flex flex-col">
+      <h2>
+        Free <br />
+        $0
+      </h2>
+      <p>For testing and devloping</p>
+      <div className="grow">
+        <ul>
+          <li>Serve HTTP apps, webhooks, and APIs with a free static domain</li>
+          <li>Ephemeral/Random domains for quick tests</li>
+          <li>Automated SSL/TLS certificates to save time</li>
+          <li>Restrict access to your endpoints with OAuth for 5 MAUs</li>
+          <li>Verify webhook signatures for up to 500 requests/month</li>
+          <li>Observe your traffic with request inspection & replay</li>
+          <li>Automate ingress with APIs and SDKs</li>
+          <li>Restricted data transfer and usage in free tier</li>
+        </ul>
+      </div>
+      <Link href="/download">
+        <Button>Download Now</Button>
+      </Link>
+    </div>
+    <div className="border rounded-lg p-10 basis-1/2 flex flex-col">
+      <h2>
+        Premium <br />
+        $9.9 per user/month{" "}
+      </h2>
+      <p>For production</p>
+      <div className="grow">
+        <ul>
+          <li>No limits, pay for what you use</li>
+          <li>Bring your own branded domains</li>
+          <li>Advanced load balancing</li>
+          <li>Traffic logs sent to your logging provider</li>
+          <li>OpenID Connect and SAML Auth for your endpoints</li>
+        </ul>
+      </div>
+      <Button onClick={toCheckout}>Subscribe</Button>
+    </div>
+  </div>
+</>
+); }
