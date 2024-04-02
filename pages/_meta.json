@@ -1,21 +1,38 @@
 {
-  "index": "Introduction",
-  "getting-started": "Getting Started",
-  "usage": "Usage",
+  "index": {
+    "title": "Home",
+    "type": "page",
+    "theme": {
+      "layout": "full",
+      "timestamp": false
+    }
+  },
   "docs": {
     "title": "Docs",
     "type": "page"
   },
   "download": {
     "title": "Download",
-    "type": "page"
+    "type": "page",
+    "theme": {
+      "layout": "full",
+      "timestamp": false
+    }
   },
   "pricing": {
     "title": "Pricing",
-    "type": "page"
+    "type": "page",
+    "theme": {
+      "layout": "full",
+      "timestamp": false
+    }
   },
   "about": {
     "title": "About",
-    "type": "page"
+    "type": "page",
+    "theme": {
+      "layout": "full",
+      "timestamp": false
+    }
   }
 }
