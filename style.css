@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+img {
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid rgba(224, 243, 255, 0.1);
+}
