@@ -21,9 +21,9 @@ const config: DocsThemeConfig = {
   project: {
     link: "https://github.com/lerte/ngroker.com",
   },
-  chat: {
-    link: "https://discord.com",
-  },
+  // chat: {
+  //   link: "https://discord.com",
+  // },
   footer: {
     text: Footer,
   },

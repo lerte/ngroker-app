@@ -1,5 +1,7 @@
 {
-  "introduction": {},
+  "index": {
+    "title": "Introduction"
+  },
   "agent": {
     "title": "Agent"
   },
