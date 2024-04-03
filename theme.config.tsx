@@ -1,12 +1,24 @@
-import React from "react";
 import Head from "./components/Head";
 import Logo from "./components/Logo";
+import { useRouter } from "next/router";
 import Footer from "./components/Footer";
 import EditOnGithub from "./components/EditOnGithub";
 import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
-  useNextSeoProps: () => ({ titleTemplate: "%s – Ngroker" }),
+  useNextSeoProps() {
+    const { asPath } = useRouter();
+    if (asPath !== "/") {
+      return {
+        titleTemplate: "%s – Ngroker",
+      };
+    } else {
+      return {
+        titleTemplate:
+          "Ngroker | Amazingly convenient tunnels to localhost, base on ngrok.",
+      };
+    }
+  },
   head: Head,
   logo: Logo,
   feedback: {
