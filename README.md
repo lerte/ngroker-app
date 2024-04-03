@@ -2,7 +2,7 @@
 
 [中文版本](./README_CN.md)
 
-⚠️ **Note: Ngroker is a non-open source project, and this repository is only used to manage requirements and user feedback.**
+⚠️ **Note: Ngroker is a non-open source project, and this repository is the ngroker.com source code. Used to manage requirements and user feedback.**
 
 [Ngroker](https://ngroker.com/) is gui client base on ngrok command line single binaray program that is a modern unified ingress platform for developers. Now available on `Windows`, `Mac`.
 
