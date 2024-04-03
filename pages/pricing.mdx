@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import Button from './../components/Button';
+// import Button from './../components/Button';
+import {Button } from 'nextra/components'
 
 export default function Pricing() {
 
@@ -10,7 +11,7 @@ window.location.href = "https://ngroker.lemonsqueezy.com/checkout";
 return (
 
 <>
-  <h1>Find a plan to power your projects</h1>
+  <h1>Find a plan to enhance your development</h1>
   <div className="mt-10 conatiner flex flex-col lg:flex-row gap-8">
     <div className="border rounded-lg p-10 basis-1/2 flex flex-col">
       <h2>
@@ -27,7 +28,9 @@ return (
         </ul>
       </div>
       <Link href="/download">
-        <Button>Download</Button>
+        <Button className="w-full !text-white bg-gradient-to-br from-cyan-500 to-green-500">
+          Download
+        </Button>
       </Link>
     </div>
     <div className="border rounded-lg p-10 basis-1/2 flex flex-col">
@@ -53,7 +56,12 @@ return (
           <li>Activate 3 devices</li>
         </ul>
       </div>
-      <Button onClick={toCheckout}>Subscribe</Button>
+      <Button
+        onClick={toCheckout}
+        className="!text-white bg-gradient-to-br from-violet-500 to-fuchsia-500"
+      >
+        Subscribe
+      </Button>
     </div>
     <div className="border rounded-lg p-10 basis-1/2 flex flex-col">
       <h2>
@@ -79,8 +87,13 @@ return (
           <li>Email Support</li>
         </ul>
       </div>
-      <Button onClick={toCheckout}>Subscribe</Button>
+      <Button
+        onClick={toCheckout}
+        className="!text-white bg-gradient-to-br from-amber-500 to-pink-500"
+      >
+        Subscribe
+      </Button>
     </div>
   </div>
 </>
-); }
+) }
