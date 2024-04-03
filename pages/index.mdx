@@ -1,7 +1,29 @@
+import qiniu from 'qiniu';
 import Image from "next/image";
 import { useState } from "react";
 
-export default function Home() {
+export const getServerSideProps = (async () => {
+  const { AccessKey, SecretKey} = process.env;
+  const windowsKey = 'Ngroker-Windows-0.0.1-Setup.exe';
+  const macKey = "Ngroker-Mac-0.0.1-Installer.dmg"
+  const mac = new qiniu.auth.digest.Mac(AccessKey, SecretKey);
+  const config = new qiniu.conf.Config();
+  const bucketManager = new qiniu.rs.BucketManager(mac, config);
+  const privateBucketDomain = 'http://cdn.ngroker.com';
+  const deadline = parseInt(Date.now() / 1000) + 1800; // 半小时过期
+  const windowsDownloadUrl = bucketManager.privateDownloadUrl(privateBucketDomain, windowsKey, deadline);
+  const macDownloadUrl = bucketManager.privateDownloadUrl(privateBucketDomain, macKey, deadline);
+
+return { props: {
+windowsDownloadUrl,
+macDownloadUrl,
+} }
+})
+
+export default function Home({
+  windowsDownloadUrl,
+macDownloadUrl,
+}) {
   const [platform, setPlatform] = useState("windows")
   useEffect(() => {
     const {userAgent} = navigator;
@@ -30,12 +52,10 @@ return (
         </a>{" "}
         and your development life will become easy.
       </strong>
-      <p className="text-center text-4xl font-medium text-green-500">
-        Comming soon
-      </p>
-      <button
+      <a
         type="button"
-        className="justify-center flex gap-4 rounded-xl px-6 py-3.5 text-base font-medium text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
+        href={platform === "windows" ? windowsDownloadUrl : macDownloadUrl}
+        className="no-underline justify-center flex gap-4 rounded-xl px-6 py-3.5 text-base font-medium text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
       >
         <span>Download for {platform}</span>
         <svg
@@ -53,7 +73,7 @@ return (
           <path d="m6 11 6 6 6-6" />
           <path d="M19 21H5" />
         </svg>
-      </button>
+      </a>
       <small className="text-center">
         <ul className="list-none">
           <li>Auto Dark Mode</li>
