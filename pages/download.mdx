@@ -1,10 +1,11 @@
 import qiniu from 'qiniu';
 import { Cards, Card } from "nextra/components";
+import { version } from '../package.json';
 
 export const getServerSideProps = (async () => {
   const { AccessKey, SecretKey} = process.env;
-  const windowsKey = 'Ngroker-Windows-0.0.1-Setup.exe';
-  const macKey = "Ngroker-Mac-0.0.1-Installer.dmg"
+  const windowsKey = `Ngroker-Windows-${version}-Setup.exe`;
+  const macKey = `Ngroker-Mac-${version}-Installer.dmg`
   const mac = new qiniu.auth.digest.Mac(AccessKey, SecretKey);
   const config = new qiniu.conf.Config();
   const bucketManager = new qiniu.rs.BucketManager(mac, config);
