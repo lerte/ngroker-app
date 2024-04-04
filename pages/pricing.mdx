@@ -2,45 +2,6 @@ import Link from "next/link";
 import { Button } from "nextra/components";
 
 export default function Pricing() {
-  const LemonSqueezyApiKey =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5NGQ1OWNlZi1kYmI4LTRlYTUtYjE3OC1kMjU0MGZjZDY5MTkiLCJqdGkiOiJmNDIxMGY3MGNmNjA4NmRkNjFkMTNkYjA2NGUzOTZlNTUzMmEyZjYyYmI0NTg3NzlmNjkyMzVmYTRmMDI4YjhlYzQxMDNkMmY1OWVmMWYyMCIsImlhdCI6MTcxMjE5OTIxMS4wMTA5MDEsIm5iZiI6MTcxMjE5OTIxMS4wMTA5MDQsImV4cCI6MjAyNzczMjAxMC45ODAzMTIsInN1YiI6IjIxNzcwNjQiLCJzY29wZXMiOltdfQ.zWYRsdfkDcKSov61RJdH5c6CMKYy0UTXLJVsgLVzImQgHnQE6iY09mMkrQbWvS9qHQdfieFlU-aegvBJUSi_BvX0Yw9jz9lv-zArEbMi55G70LZEjIeA-eBxgZFO9nW7IngOeTMUhAPuwWQ8i0eyni2FIu4c-6Bt7UtfrrNJnQBjPPagyXSaomE0WYp8UXVUFD71_G-_0-Y5r0MuewoBMcQdw9OK5ej_1ei8LI4i9dTprkFVPtYPAy8rd7EfcEgeZd9QVVF5R8XnjMoQCEzm3630f4aOjiDq4a6M9Jt29Fmf-X3uGOqCVp09PYq3qQnkHNRbDGcvhanyMz92-3cDuzmq3stg9YUMMabAnwiREm2rlYrjuawnb4r1sMGafewtoXKq2wG37hKveWwQFXzGqyD0sUdNUPb0mz4O464Dk7skstxlQLFlvD1j-nRUBMKQQHJey5hcC-UMtP0qX8FnUaD3McMaoYZyn98aIYDwdhv18s_RtLPkcjRC9RHGbkJ7";
-  const createCheckout = async (variant) => {
-    const response = await fetch("https://api.lemonsqueezy.com/v1/checkouts", {
-      method: "POST",
-      headers: {
-        Accept: "application/vnd.api+json",
-        "Content-Type": "application/vnd.api+json",
-        Authorization: `Bearer ${LemonSqueezyApiKey}`,
-      },
-      body: JSON.stringify({
-        data: {
-          type: "checkouts",
-          relationships: {
-            store: {
-              data: {
-                type: "stores",
-                id: "78369",
-              },
-            },
-            variant: {
-              data: {
-                type: "variants",
-                "id": variant
-              }
-            }            
-          },
-        },
-      }),
-    });
-    const data = await response.json();
-    return data;
-  };
-
-const toCheckout = async (variant) => {
-const {data} = await createCheckout(variant);
-window.location.href = data.attributes.url
-};
-
 return (
 
 <>
@@ -89,12 +50,14 @@ return (
           <li>Activate 3 devices</li>
         </ul>
       </div>
-      <Button
-        onClick={() => toCheckout("327639")}
-        className="!text-white bg-gradient-to-br from-violet-500 to-fuchsia-500"
+      <a
+        className="block"
+        href="https://ngroker.lemonsqueezy.com/buy/0dfeaa09-a6ba-4c5c-a645-8c313b14fbab"
       >
-        Subscribe
-      </Button>
+        <Button className="w-full !text-white bg-gradient-to-br from-violet-500 to-fuchsia-500">
+          Subscribe
+        </Button>
+      </a>
     </div>
     <div className="border rounded-lg p-10 basis-1/2 flex flex-col">
       <h2>
@@ -120,12 +83,11 @@ return (
           <li>Email Support</li>
         </ul>
       </div>
-      <Button
-        onClick={() => toCheckout("327640")}
-        className="!text-white bg-gradient-to-br from-amber-500 to-pink-500"
-      >
-        Subscribe
-      </Button>
+      <a href="https://ngroker.lemonsqueezy.com/buy/67d41a21-fbb8-41d6-bedb-7cc43d373269">
+        <Button className="w-full !text-white bg-gradient-to-br from-amber-500 to-pink-500">
+          Subscribe
+        </Button>
+      </a>
     </div>
   </div>
 </>
