@@ -10,7 +10,7 @@ export const getServerSideProps = (async () => {
   const mac = new qiniu.auth.digest.Mac(AccessKey, SecretKey);
   const config = new qiniu.conf.Config();
   const bucketManager = new qiniu.rs.BucketManager(mac, config);
-  const privateBucketDomain = 'http://cdn.ngroker.com';
+  const privateBucketDomain = 'https://cdn.ngroker.com';
   const deadline = parseInt(Date.now() / 1000) + 1800; // 半小时过期
   const windowsDownloadUrl = bucketManager.privateDownloadUrl(privateBucketDomain, windowsKey, deadline);
   const macDownloadUrl = bucketManager.privateDownloadUrl(privateBucketDomain, macKey, deadline);
