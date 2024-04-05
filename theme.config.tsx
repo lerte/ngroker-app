@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Head from "./components/Head";
 import Logo from "./components/Logo";
 import { useRouter } from "next/router";
@@ -6,6 +7,10 @@ import EditOnGithub from "./components/EditOnGithub";
 import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
+  banner: {
+    key: "2.0-release",
+    text: <Link href="/download">🎉 Ngroker is published. Download Now →</Link>,
+  },
   useNextSeoProps() {
     const { asPath } = useRouter();
     if (asPath !== "/") {
