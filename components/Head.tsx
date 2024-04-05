@@ -6,14 +6,6 @@ const Head = () => {
         type="image/png"
         href="/icon.ico"
       />
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-YDD0SSFPEH"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-YDD0SSFPEH');
-      </script>      
     </>
   );
 };
