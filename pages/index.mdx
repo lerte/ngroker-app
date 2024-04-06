@@ -1,30 +1,10 @@
-import qiniu from 'qiniu';
 import Image from "next/image";
 import { useState } from "react";
+import { useEffect } from "react";
 import {version} from '../package.json'
 
-export const getServerSideProps = (async () => {
-  const { AccessKey, SecretKey} = process.env;
-  const windowsKey = `Ngroker-Windows-${version}-Setup.exe`;
-  const macKey = `Ngroker-Mac-${version}-Installer.dmg`
-  const mac = new qiniu.auth.digest.Mac(AccessKey, SecretKey);
-  const config = new qiniu.conf.Config();
-  const bucketManager = new qiniu.rs.BucketManager(mac, config);
-  const privateBucketDomain = 'https://cdn.ngroker.com';
-  const deadline = parseInt(Date.now() / 1000) + 1800; // 半小时过期
-  const windowsDownloadUrl =''// bucketManager.privateDownloadUrl(privateBucketDomain, windowsKey, deadline);
-  const macDownloadUrl = ''//bucketManager.privateDownloadUrl(privateBucketDomain, macKey, deadline);
-
-return { props: {
-windowsDownloadUrl,
-macDownloadUrl,
-} }
-})
-
-export default function Home({
-  windowsDownloadUrl,
-macDownloadUrl,
-}) {
+export default function Home() {
+  const [downloadUrl, setDownloadUrl] = useState('')
   const [platform, setPlatform] = useState("windows")
   useEffect(() => {
     const {userAgent} = navigator;
@@ -32,9 +12,11 @@ macDownloadUrl,
     const isMac = userAgent.indexOf('Macintosh') > -1
     if(isWindows){
       setPlatform("windows")
+      setDownloadUrl(`https://github.com/lerte/ngroker.com/releases/download/v${version}/Ngroker-Windows-${version}-Setup.exe`)
     }
     if(isMac){
       setPlatform("mac")
+      setDownloadUrl(`https://github.com/lerte/ngroker.com/releases/download/v${version}/Ngroker-Mac-${version}-amd64-Installer.dmg`)
     }
   },[])
 
@@ -55,7 +37,7 @@ return (
       </strong>
       <a
         type="button"
-        href={platform === "windows" ? windowsDownloadUrl : macDownloadUrl}
+        href={downloadUrl}
         className="no-underline justify-center flex gap-4 rounded-xl px-6 py-3.5 text-base font-medium text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
       >
         <span>Download for {platform}</span>
@@ -96,5 +78,3 @@ return (
 
 );
 }
-import { useEffect } from "react"
-import { platform } from "os"
