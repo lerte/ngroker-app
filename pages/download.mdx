@@ -5,16 +5,16 @@ import { version } from '../package.json';
 export const getServerSideProps = (async () => {
   const { AccessKey, SecretKey} = process.env;
   const windowsKey = `Ngroker-Windows-${version}-Setup.exe`;
-  const macIntel = `Ngroker-Mac-${version}-Installer.dmg`
-  const macArm64 = `arm.dmg`
+  const macIntel = `Ngroker-Mac-${version}-amd64-Installer.dmg`
+  const macArm64 = `Ngroker-Mac-${version}-arm64-Installer.dmg`
 const mac = new qiniu.auth.digest.Mac(AccessKey, SecretKey);
 const config = new qiniu.conf.Config();
 const bucketManager = new qiniu.rs.BucketManager(mac, config);
 const privateBucketDomain = 'https://cdn.ngroker.com';
 const deadline = parseInt(Date.now() / 1000) + 1800; // 半小时过期
 const windowsDownloadUrl = bucketManager.privateDownloadUrl(privateBucketDomain, windowsKey, deadline);
-const macIntelUrl = bucketManager.privateDownloadUrl(privateBucketDomain, macIntel, deadline);
-const macArm64Url = bucketManager.privateDownloadUrl(privateBucketDomain, macArm64, deadline);
+const macIntelUrl = ''//bucketManager.privateDownloadUrl(privateBucketDomain, macIntel, deadline);
+const macArm64Url = ''//bucketManager.privateDownloadUrl(privateBucketDomain, macArm64, deadline);
 
 return { props: {
 windowsDownloadUrl,

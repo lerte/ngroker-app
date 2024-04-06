@@ -12,8 +12,8 @@ export const getServerSideProps = (async () => {
   const bucketManager = new qiniu.rs.BucketManager(mac, config);
   const privateBucketDomain = 'https://cdn.ngroker.com';
   const deadline = parseInt(Date.now() / 1000) + 1800; // 半小时过期
-  const windowsDownloadUrl = bucketManager.privateDownloadUrl(privateBucketDomain, windowsKey, deadline);
-  const macDownloadUrl = bucketManager.privateDownloadUrl(privateBucketDomain, macKey, deadline);
+  const windowsDownloadUrl =''// bucketManager.privateDownloadUrl(privateBucketDomain, windowsKey, deadline);
+  const macDownloadUrl = ''//bucketManager.privateDownloadUrl(privateBucketDomain, macKey, deadline);
 
 return { props: {
 windowsDownloadUrl,
