@@ -20,9 +20,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "pnpm"
       - name: Install dependencies
-        run: | 
-          pnpm install
-          pnpm export
+        run: pnpm install && pnpm export
       - name: Deploy
         run: |
             git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git

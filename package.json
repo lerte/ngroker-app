@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next build && touch out/.nojekyll",
+    "export": "next export",
     "deploy": "gh-pages -d out -t true"
   },
   "repository": {

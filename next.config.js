@@ -5,10 +5,10 @@ const withNextra = require("nextra")({
 });
 
 const nextConfig = {
+  export: "output",
   images: {
     unoptimized: true,
   },
-  output: "export",
 };
 
 module.exports = {
