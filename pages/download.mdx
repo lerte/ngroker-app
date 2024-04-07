@@ -1,7 +1,8 @@
 import { Cards, Card } from "nextra/components";
-import { version } from '../package.json';
+import packageInfo from './../package.json'
 
 export default function Download() {
+  const {version} = packageInfo
   const windowsDownloadUrl = `https://github.com/lerte/ngroker.com/releases/download/v${version}/Ngroker-Windows-${version}-Setup.exe`;
   
   const macIntelUrl = `https://github.com/lerte/ngroker.com/releases/download/v${version}/Ngroker-Mac-${version}-amd64-Installer.dmg`;
