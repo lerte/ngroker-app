@@ -23,7 +23,7 @@ Ngroker 官网提供了最新版本的下载：[立即下载] (https://ngroker.c
 
 ## 使用文档
 
-https://ngroker.com/docs/introduction
+https://ngroker.com/docs
 
 ## 致谢
 

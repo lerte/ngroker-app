@@ -19,11 +19,11 @@ The Ngroker desktop supports Windows/Mac and combines your reverse proxy, firewa
 
 ## Installation
 
-Ngroker official website provides the download of the latest version: [Download Now](https://ngroker.com/download). If you want to download the historical version: [Click here](https://github.com/lerte/ngroker.com/releases).
+Ngroker official website provides the download of the latest version: [Download Now](https://ngroker.com/download). If you want to download the historical version: [Click here](https://github.com/lerte/ngroker-app/releases).
 
 ## Documentation
 
-https://ngroker.com/docs/introduction
+https://ngroker.com/docs
 
 ## Thanks
 
