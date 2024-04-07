@@ -7,3 +7,7 @@ img {
   border-radius: 10px;
   border: 1px solid rgba(224, 243, 255, 0.1);
 }
+
+#download-linux > span {
+  height: 100%;
+}

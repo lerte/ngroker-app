@@ -3,15 +3,15 @@ import packageInfo from './../package.json'
 
 export default function Download() {
   const {version} = packageInfo
-  const windowsDownloadUrl = `https://github.com/lerte/ngroker.com/releases/download/v${version}/Ngroker-Windows-${version}-Setup.exe`;
+  const windowsDownloadUrl = `https://github.com/lerte/ngroker-app/releases/download/v${version}/Ngroker-Windows-${version}-Setup.exe`;
   
-  const macIntelUrl = `https://github.com/lerte/ngroker.com/releases/download/v${version}/Ngroker-Mac-${version}-amd64-Installer.dmg`;
+  const macDownloadUrl = `https://github.com/lerte/ngroker-app/releases/download/v${version}/Ngroker-Mac-${version}-universal-Installer.dmg`;
     
-  const macArm64Url = `https://github.com/lerte/ngroker.com/releases/download/v${version}/Ngroker-Mac-${version}-arm64-Installer.dmg`;
+  const linuxDownloadUrl = `https://github.com/lerte/ngroker-app/releases/download/v${version}/Ngroker-Linux-${version}.AppImage`;
 
 return <div className="container-fluid h-full grid place-content-center">
 
-<Cards className="transition-transform flex flex-col md:flex-row scale-[300%] md:scale-[240%] lg:scale-[320%]">
+<Cards className="transition-transform flex flex-col md:flex-row scale-[300%] md:scale-[180%] lg:scale-[240%] xl:scale-[300%]">
   <Card
     title="Windows"
     href={windowsDownloadUrl}
@@ -41,16 +41,17 @@ return <div className="container-fluid h-full grid place-content-center">
     }
   />
   <Card
-    title="Mac Intel"
-    href={macIntelUrl}
+    title="MacOS"
+    href={macDownloadUrl}
     icon={<svg className="fill-black dark:fill-white" height="44" viewBox="0 0 17 48" xmlns="http://www.w3.org/2000/svg"><path d="m15.5752 19.0792a4.2055 4.2055 0 0 0 -2.01 3.5376 4.0931 4.0931 0 0 0 2.4908 3.7542 9.7779 9.7779 0 0 1 -1.2755 2.6351c-.7941 1.1431-1.6244 2.2862-2.8878 2.2862s-1.5883-.734-3.0443-.734c-1.42 0-1.9252.7581-3.08.7581s-1.9611-1.0589-2.8876-2.3584a11.3987 11.3987 0 0 1 -1.9373-6.1487c0-3.61 2.3464-5.523 4.6566-5.523 1.2274 0 2.25.8062 3.02.8062.734 0 1.8771-.8543 3.2729-.8543a4.3778 4.3778 0 0 1 3.6822 1.841zm-6.8586-2.0456a1.3865 1.3865 0 0 1 -.2527-.024 1.6557 1.6557 0 0 1 -.0361-.337 4.0341 4.0341 0 0 1 1.0228-2.5148 4.1571 4.1571 0 0 1 2.7314-1.4078 1.7815 1.7815 0 0 1 .0361.373 4.1487 4.1487 0 0 1 -.9867 2.587 3.6039 3.6039 0 0 1 -2.5148 1.3236z"></path></svg>}
 
 />
 
   <Card
-    title="Mac Silicon"
-    href={macArm64Url}
-    icon={<svg className="fill-black dark:fill-white" height="44" viewBox="0 0 17 48" xmlns="http://www.w3.org/2000/svg"><path d="m15.5752 19.0792a4.2055 4.2055 0 0 0 -2.01 3.5376 4.0931 4.0931 0 0 0 2.4908 3.7542 9.7779 9.7779 0 0 1 -1.2755 2.6351c-.7941 1.1431-1.6244 2.2862-2.8878 2.2862s-1.5883-.734-3.0443-.734c-1.42 0-1.9252.7581-3.08.7581s-1.9611-1.0589-2.8876-2.3584a11.3987 11.3987 0 0 1 -1.9373-6.1487c0-3.61 2.3464-5.523 4.6566-5.523 1.2274 0 2.25.8062 3.02.8062.734 0 1.8771-.8543 3.2729-.8543a4.3778 4.3778 0 0 1 3.6822 1.841zm-6.8586-2.0456a1.3865 1.3865 0 0 1 -.2527-.024 1.6557 1.6557 0 0 1 -.0361-.337 4.0341 4.0341 0 0 1 1.0228-2.5148 4.1571 4.1571 0 0 1 2.7314-1.4078 1.7815 1.7815 0 0 1 .0361.373 4.1487 4.1487 0 0 1 -.9867 2.587 3.6039 3.6039 0 0 1 -2.5148 1.3236z"></path></svg>}
+    title="Linux"
+    id="download-linux"
+    href={linuxDownloadUrl}
+    icon={<svg className="fill-[#e95420] dark:fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.45 57.87"><circle cx="9.66" cy="27.41" r="8.12"/><circle cx="43.48" cy="9.61" r="8.12"/><path d="M7.34,38.71A26.67,26.67,0,0,0,32.58,55.55a11.47,11.47,0,0,1-2.49-7Q29,48.4,28,48.19A19.62,19.62,0,0,1,14.55,37.83,11.49,11.49,0,0,1,7.34,38.71Z"/><circle cx="41.65" cy="48.35" r="8.12"/><path d="M48.9,39.31a11.58,11.58,0,0,1,4,6.25,26.64,26.64,0,0,0,1.36-31.63,11.47,11.47,0,0,1-4.7,5.54A19.73,19.73,0,0,1,48.9,39.31Z"/><path d="M9.68,15.85a11.44,11.44,0,0,1,2.4.25,11.72,11.72,0,0,1,3.77,1.54,19.73,19.73,0,0,1,16-8.56,12.15,12.15,0,0,1,.22-1.9h0a11.75,11.75,0,0,1,2.34-4.89A26.9,26.9,0,0,0,8.82,15.88C9.11,15.86,9.39,15.85,9.68,15.85Z"/></svg>}
 
 />
 
