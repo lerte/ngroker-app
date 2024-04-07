@@ -36,7 +36,7 @@ const config: DocsThemeConfig = {
     component: EditOnGithub,
   },
   project: {
-    link: "https://github.com/lerte/ngroker.com",
+    link: "https://github.com/lerte/ngroker-app",
   },
   // chat: {
   //   link: "https://discord.com",
