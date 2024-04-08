@@ -11,6 +11,7 @@ export default function Home() {
     const {userAgent} = navigator;
     const isWindows = userAgent.indexOf('Windows') > -1
     const isMac = userAgent.indexOf('Macintosh') > -1
+    const isLinux = userAgent.indexOf('Linux') > -1
     if(isWindows){
       setPlatform("windows")
       setDownloadUrl(`https://github.com/lerte/ngroker-app/releases/download/v${version}/Ngroker-Windows-${version}-Setup.exe`)
@@ -18,6 +19,10 @@ export default function Home() {
     if(isMac){
       setPlatform("mac")
       setDownloadUrl(`https://github.com/lerte/ngroker-app/releases/download/v${version}/Ngroker-Mac-${version}-universal-Installer.dmg`)
+    }
+    if(isLinux){
+      setPlatform("linux")
+      setDownloadUrl(`https://github.com/lerte/ngroker-app/releases/download/v${version}/Ngroker-Linux-${version}.AppImage`)
     }
   },[])
 
