@@ -6,22 +6,22 @@ import packageInfo from './../package.json'
 export default function Home() {
   const {version} = packageInfo
   const [downloadUrl, setDownloadUrl] = useState('')
-  const [platform, setPlatform] = useState("windows")
+  const [platform, setPlatform] = useState("Windows")
   useEffect(() => {
     const {userAgent} = navigator;
     const isWindows = userAgent.indexOf('Windows') > -1
     const isMac = userAgent.indexOf('Macintosh') > -1
     const isLinux = userAgent.indexOf('Linux') > -1
     if(isWindows){
-      setPlatform("windows")
+      setPlatform("Windows")
       setDownloadUrl(`https://github.com/lerte/ngroker-app/releases/download/v${version}/Ngroker-Windows-${version}-Setup.exe`)
     }
     if(isMac){
-      setPlatform("mac")
+      setPlatform("macOS")
       setDownloadUrl(`https://github.com/lerte/ngroker-app/releases/download/v${version}/Ngroker-Mac-${version}-universal-Installer.dmg`)
     }
     if(isLinux){
-      setPlatform("linux")
+      setPlatform("Linux")
       setDownloadUrl(`https://github.com/lerte/ngroker-app/releases/download/v${version}/Ngroker-Linux-${version}.AppImage`)
     }
   },[])
