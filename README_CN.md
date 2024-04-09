@@ -4,7 +4,7 @@
 
 ⚠️ **注意：Ngroker 是非开源项目，本仓库是官方网站的源码，管理需求和用户反馈，以及提供下载客户端。**
 
-[Ngroker](https://ngroker.com/)是一个内网穿透的 GUI 客户端，基于[ngrok](https://ngrok.com)命令行的单二进制程序的.现在支持 `Windows` 和 `Mac` 平台.
+[Ngroker](https://ngroker.com/)是一个内网穿透的 GUI 客户端，基于[ngrok](https://ngrok.com)命令行的单二进制程序的.现在支持 `Windows`,`Mac`, `Linux` 平台.
 
 官方网站：https://ngroker.com
 
