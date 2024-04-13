@@ -7,5 +7,11 @@
   },
   "credentials": {
     "title": "Credentials"
+  },
+  "settings": {
+    "title": "Settings"
+  },
+  "faqs": {
+    "title": "Faqs"
   }
 }
