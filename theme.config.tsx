@@ -8,10 +8,11 @@ import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
   banner: {
-    key: "0.0.6",
+    key: "0.0.7",
     text: (
       <Link href="/download">
-        🎉 Ngroker is supported linux now. Download Now →
+        🎉 Ngroker 0.0.7 is released now. Rewrite by tauri small size, Download
+        Now →
       </Link>
     ),
   },
