@@ -122,7 +122,7 @@ const Download = () => {
               href={linuxDebDownloadUrl}
               className="rounded-md bg-green-700 text-white p-2"
             >
-              mLinux Deb
+              Linux Deb
             </a>
           </div>
         </Card>
