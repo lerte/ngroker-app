@@ -10,7 +10,7 @@
 
 Ngroker 的特点是方便，快速，美观，免费，不需要登录，安装后可以立即使用。
 
-- 跨平台，基于 Electron + Vue + Vuetify 开发。
+- 跨平台，基于 Tauri + Vue + Vuetify 开发。
 - 支持浅色和深色主题模式。
 
 ## 桌面端
