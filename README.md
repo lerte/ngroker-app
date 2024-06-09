@@ -10,7 +10,7 @@ Official website: https://ngroker.com
 
 The features of Ngroker are small, fast, beautiful, free, no login is required, and it can be used immediately after installation.
 
-- Cross-platform, based on Elctron+Vue+Vuetify development.
+- Cross-platform, based on Tauri+Vue+Vuetify development.
 - Both light and dark theme modes are supported.
 
 ## Desktop App
