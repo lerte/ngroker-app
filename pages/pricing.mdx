@@ -2,93 +2,94 @@ import Link from "next/link";
 import { Button } from "nextra/components";
 
 export default function Pricing() {
-return (
+  return (
 
-<>
-  <h1>Find a plan to enhance your development</h1>
-  <div className="mt-10 conatiner flex flex-col lg:flex-row gap-8">
-    <div className="border rounded-lg p-10 basis-1/2 flex flex-col">
-      <h2>
-        Free <br />
-        $0
-      </h2>
-      <p>For testing and devloping</p>
-      <div className="grow">
-        <ul>
-          <li>Serve HTTP apps, webhooks, and APIs with a free static domain</li>
-          <li>Ephemeral/Random domains for quick tests</li>
-          <li>Automated SSL/TLS certificates to save time</li>
-          <li>Restricted data transfer and usage in free tier</li>
-        </ul>
+    <>
+      <h1>Find a plan to enhance your development</h1>
+      <div className="mt-10 conatiner flex flex-col lg:flex-row gap-8">
+        <div className="border rounded-lg p-10 basis-1/2 flex flex-col">
+          <h2>
+            Free <br />
+            $0
+          </h2>
+          <p>For testing and devloping</p>
+          <div className="grow">
+            <ul>
+              <li>Serve HTTP apps, webhooks, and APIs with a free static domain</li>
+              <li>Ephemeral/Random domains for quick tests</li>
+              <li>Automated SSL/TLS certificates to save time</li>
+              <li>Restricted data transfer and usage in free tier</li>
+            </ul>
+          </div>
+          <Link href="/download">
+            <Button className="w-full !text-white bg-gradient-to-br from-cyan-500 to-green-500">
+              Download
+            </Button>
+          </Link>
+        </div>
+        <div className="border rounded-lg p-10 basis-1/2 flex flex-col">
+          <h2>
+            Solo <br />
+            $9/month
+          </h2>
+          <p>For bootstrappers and indie hackers.</p>
+          <div className="grow">
+            <ul>
+              <li>Include all free features</li>
+              <li>
+                Api call feature(Some api you need pay from{" "}
+                <a
+                  target="_blank"
+                  href="https://ngrok.com/pricing"
+                >
+                  ngrok
+                </a>
+                )
+              </li>
+              <li>Unlimited update</li>
+              <li>Activate 3 devices</li>
+            </ul>
+          </div>
+          <a
+            className="block"
+            href="https://store.ngroker.com/buy/0dfeaa09-a6ba-4c5c-a645-8c313b14fbab"
+          >
+            <Button className="w-full !text-white bg-gradient-to-br from-violet-500 to-fuchsia-500">
+              Subscribe
+            </Button>
+          </a>
+        </div>
+        <div className="border rounded-lg p-10 basis-1/2 flex flex-col">
+          <h2>
+            Team <br />
+            $99/year
+          </h2>
+          <p>For team and company</p>
+          <div className="grow">
+            <ul>
+              <li>Include all free features</li>
+              <li>
+                Api call feature(Some api you need pay from{" "}
+                <a
+                  target="_blank"
+                  href="https://ngrok.com/pricing"
+                >
+                  ngrok
+                </a>
+                )
+              </li>
+              <li>Unlimited update</li>
+              <li>Activate 5 devices</li>
+              <li>Email Support</li>
+            </ul>
+          </div>
+          <a href="https://store.ngroker.com/buy/67d41a21-fbb8-41d6-bedb-7cc43d373269">
+            <Button className="w-full !text-white bg-gradient-to-br from-amber-500 to-pink-500">
+              Subscribe
+            </Button>
+          </a>
+        </div>
       </div>
-      <Link href="/download">
-        <Button className="w-full !text-white bg-gradient-to-br from-cyan-500 to-green-500">
-          Download
-        </Button>
-      </Link>
-    </div>
-    <div className="border rounded-lg p-10 basis-1/2 flex flex-col">
-      <h2>
-        Solo <br />
-        $9/month
-      </h2>
-      <p>For bootstrappers and indie hackers.</p>
-      <div className="grow">
-        <ul>
-          <li>Include all free features</li>
-          <li>
-            Api call feature(Some api you need pay from{" "}
-            <a
-              target="_blank"
-              href="https://ngrok.com/pricing"
-            >
-              ngrok
-            </a>
-            )
-          </li>
-          <li>Unlimited update</li>
-          <li>Activate 3 devices</li>
-        </ul>
-      </div>
-      <a
-        className="block"
-        href="https://ngroker.lemonsqueezy.com/buy/0dfeaa09-a6ba-4c5c-a645-8c313b14fbab"
-      >
-        <Button className="w-full !text-white bg-gradient-to-br from-violet-500 to-fuchsia-500">
-          Subscribe
-        </Button>
-      </a>
-    </div>
-    <div className="border rounded-lg p-10 basis-1/2 flex flex-col">
-      <h2>
-        Team <br />
-        $99/year
-      </h2>
-      <p>For team and company</p>
-      <div className="grow">
-        <ul>
-          <li>Include all free features</li>
-          <li>
-            Api call feature(Some api you need pay from{" "}
-            <a
-              target="_blank"
-              href="https://ngrok.com/pricing"
-            >
-              ngrok
-            </a>
-            )
-          </li>
-          <li>Unlimited update</li>
-          <li>Activate 5 devices</li>
-          <li>Email Support</li>
-        </ul>
-      </div>
-      <a href="https://ngroker.lemonsqueezy.com/buy/67d41a21-fbb8-41d6-bedb-7cc43d373269">
-        <Button className="w-full !text-white bg-gradient-to-br from-amber-500 to-pink-500">
-          Subscribe
-        </Button>
-      </a>
-    </div>
-  </div>
-</>
-); }
+    </>
+  );
+}
