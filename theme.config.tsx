@@ -1,18 +1,17 @@
-import Link from "next/link";
+import { DocsThemeConfig } from "nextra-theme-docs";
+import EditOnGithub from "./components/EditOnGithub";
+import Footer from "./components/Footer";
 import Head from "./components/Head";
+import Link from "next/link";
 import Logo from "./components/Logo";
 import { useRouter } from "next/router";
-import Footer from "./components/Footer";
-import EditOnGithub from "./components/EditOnGithub";
-import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
   banner: {
-    key: "0.0.7",
+    key: "0.0.8",
     text: (
       <Link href="/download">
-        🎉 Ngroker 0.0.7 is released now. Rewrite by tauri small size, Download
-        Now →
+        🎉 Ngroker 0.0.8 is released now. Add advanced mode, Download Now →
       </Link>
     ),
   },
