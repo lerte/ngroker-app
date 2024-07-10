@@ -30,6 +30,9 @@ const config: DocsThemeConfig = {
   },
   head: Head,
   logo: Logo,
+  sidebar: {
+    toggleButton: true,
+  },
   feedback: {
     content: null,
   },
