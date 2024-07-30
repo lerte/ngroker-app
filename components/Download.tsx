@@ -86,7 +86,7 @@ const Download = () => {
               href={windowsNsisDownloadUrl}
               className="rounded-md bg-blue-700 text-white p-2"
             >
-              Windwos Nsis Setup
+              Windows Nsis Setup
             </a>
           </div>
         </Card>
