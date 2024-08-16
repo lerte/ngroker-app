@@ -6,8 +6,8 @@ export default function Pricing() {
 
     <>
       <h1>Find a plan to enhance your development</h1>
-      <div className="mt-10 conatiner flex flex-col lg:flex-row gap-8">
-        <div className="border rounded-lg p-10 basis-1/2 flex flex-col">
+      <div className="mt-10 conatiner gap-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+        <div className="border rounded-lg p-10 flex flex-col">
           <h2>
             Free <br />
             $0
@@ -27,7 +27,7 @@ export default function Pricing() {
             </Button>
           </Link>
         </div>
-        <div className="border rounded-lg p-10 basis-1/2 flex flex-col">
+        <div className="border rounded-lg p-10 flex flex-col">
           <h2>
             Solo <br />
             $9/month
@@ -59,7 +59,7 @@ export default function Pricing() {
             </Button>
           </a>
         </div>
-        <div className="border rounded-lg p-10 basis-1/2 flex flex-col">
+        <div className="border rounded-lg p-10 flex flex-col">
           <h2>
             Team <br />
             $99/year
@@ -89,7 +89,38 @@ export default function Pricing() {
             </Button>
           </a>
         </div>
+        <div className="border rounded-lg p-10 flex flex-col">
+          <h2>
+            Forever <br />
+            $199/one-time
+          </h2>
+          <p>For team and company</p>
+          <div className="grow">
+            <ul>
+              <li>Include all free features</li>
+              <li>
+                Api call feature(Some api you need pay from{" "}
+                <a
+                  target="_blank"
+                  href="https://ngrok.com/pricing"
+                >
+                  ngrok
+                </a>
+                )
+              </li>
+              <li>Unlimited update</li>
+              <li>Activate 8 devices</li>
+              <li>Email Support</li>
+            </ul>
+          </div>
+          <a href="https://store.ngroker.com/buy/af99bb1b-a108-40c8-9473-a65e1d19c2b3">
+            <Button className="w-full !text-white bg-gradient-to-br from-indigo-500 to-red-500">
+              Buy Now
+            </Button>
+          </a>
+        </div>
       </div>
     </>
-  );
+
+);
 }
