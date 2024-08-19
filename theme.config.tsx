@@ -46,7 +46,7 @@ const config: DocsThemeConfig = {
     link: "https://github.com/lerte/ngroker-app",
   },
   chat: {
-    link: "https://x.com/engroker",
+    link: "https://x.com/actifyjs",
     icon: (
       <svg
         viewBox="0 0 24 24"
