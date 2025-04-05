@@ -8,10 +8,10 @@ import { useRouter } from "next/router";
 
 const config: DocsThemeConfig = {
   banner: {
-    key: "0.0.8",
+    key: "0.1.0",
     text: (
       <Link href="/download">
-        🎉 Ngroker 0.0.8 is released now. Add advanced mode, Download Now →
+        🎉 Ngroker 0.1.0 is released now. Add advanced mode, Download Now →
       </Link>
     ),
   },
