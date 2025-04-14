@@ -11,7 +11,7 @@ const config: DocsThemeConfig = {
     key: "0.1.0",
     text: (
       <Link href="/download">
-        🎉 Ngroker 0.1.0 is released now. Add advanced mode, Download Now →
+        🎉 Ngroker 0.1.0 is released now. Refactor with Tauri v2, Download Now →
       </Link>
     ),
   },
